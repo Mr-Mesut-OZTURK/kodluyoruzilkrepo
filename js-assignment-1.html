@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous" />
+        <title>Kodluyoruz Javascript Saat Ödevi</title>
+        <style>
+            body {
+                background: black;
+            }
+
+            .clock {
+                position: relative;
+                text-align: center;
+                color: #e98208;
+                font-size: 60px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                letter-spacing: 7px;
+            }
+
+            .text1 {
+                position: relative;
+                text-align: center;
+                color: #e98208;
+                font-size: 50px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                letter-spacing: 7px;
+            }
+
+            .text2 {
+                position: relative;
+                text-align: center;
+                color: #e98208;
+                font-size: 40px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                letter-spacing: 7px;
+                margin-right: 100px;
+                margin-left: 100px;
+            }
+
+            img {
+                margin-top: 120px;
+                width: 17%;
+            }
+        </style>
+    </head>
+
+    <body class="bg-dark">
+        <div class="text-center">
+            <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+                alt="" class="rounded" />
+            <div class="text1 text-center">
+                Merhaba, <strong><span id="myName"></span></strong>! Hoş geldin!
+            </div>
+            <div id="myClock" class="clock"></div>
+            <div class="text2 text-center">
+                tarihinde
+                <strong>Kodluyoruz Frontend Web Development Patikası</strong>'nın
+                Javascript bölümü 1. Ödevindesiniz.
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+
+            $(document).ready(function(){
+                
+                const nameDiv = document.getElementById("myName")
+                const name = prompt("Enter your name?")
+                nameDiv.innerHTML = name;
+
+                const showTime = () => {
+                    const clockDiv = document.getElementById("myClock");
+                    const time = new Date()
+                    let hour = time.getHours() > 9 ? time.getHours(): `0${time.getHours()}`
+                    let minute = time.getMinutes() > 9 ? time.getMinutes(): `0${time.getMinutes()}`
+                    let second = time.getSeconds() > 9 ? time.getSeconds(): `0${time.getSeconds()}`
+                    let day = time.getDay()
+
+                    switch (day) {
+                        case 1:
+                            day = "Pazartesi"
+                            break;
+                        case 2:
+                            day = "Salı"
+                            break;
+                        case 3:
+                            day = "Çarşamba"
+                            break;
+                        case 4:
+                            day = "Perşembe"
+                            break;
+                        case 5:
+                            day = "Cuma"
+                            break;
+                        case 6:
+                            day = "Cumartesi"
+                            break;
+                        case 0:
+                            day = "Pazar"
+                            break;
+                    }
+
+
+
+
+                    clockDiv.innerHTML = `${hour}:${minute}:${second} ${day}`;
+                }
+
+                setInterval(() => {
+                    showTime()
+                }, 1000);
+            })
+
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>
