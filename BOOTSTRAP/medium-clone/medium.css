@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bottom_shadow {
+    box-shadow:1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color: black!important;
+    text-decoration: none!important;
+}
+
+.border_left {
+    border-left: 1px solid
+}
