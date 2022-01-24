@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/********************* header *********************/
+header {
+    background-color: navy;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+ul li {
+    /* background-color: #342; */
+    margin-right: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding:10px;
+}
+
+/********************* main *********************/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 50px;
+    padding: 50px;
+}
+
+/********************* index *********************/
+article.anasayfa {
+    background-color: #555;
+    padding: 30px;
+    color: #fff;
+}
+
+article.anasayfa h1 {
+    text-align: center;
+    font-size:4em;
+    margin-bottom: 20px;
+}
+
+article.anasayfa p {
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+/********************* products *********************/
+article h2 {
+    text-align: center;
+    padding: 10px;
+    background-color: #0c42f1;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+article img {}
